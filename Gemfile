@@ -6,8 +6,16 @@ gem 'rails', '3.2.19'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+group :development, :test do
+  # make sure sqlite3 gem ONLY occurs inside development & test groups
+  gem 'sqlite3' # use SQLite only in development and testing
+end
 
+group :production do
+  # make sure the following gems are in your production group:
+  gem 'pg'              # use PostgreSQL in production (Heroku)
+  gem 'rails_12factor'  # Heroku-specific production settings
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
