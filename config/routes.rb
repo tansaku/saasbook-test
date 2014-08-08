@@ -1,4 +1,7 @@
 SaasbookTest::Application.routes.draw do
+  resources :organisations
+
+
   mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
 
   # The priority is based upon order of creation:

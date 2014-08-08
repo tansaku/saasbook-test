@@ -62,3 +62,5 @@ group :test do
   gem 'factory_girl_rails' # if using FactoryGirl
   gem 'metric_fu'        # collect code metrics
 end
+
+gem "twitter-bootstrap-rails"
